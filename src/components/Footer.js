@@ -5,17 +5,22 @@ import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import Facebook from "@material-ui/icons/Facebook";
 import Twitter from "@material-ui/icons/Twitter";
 import Instagram from "@material-ui/icons/Instagram";
+import { Email, GitHub, LinkedIn } from "@material-ui/icons";
+import Link from "react"
 
 const useStyles = makeStyles({
   bottomNavContainer: {
-    background: "#222",
+    background: "Transparent",
+    height: 900,
+    
   },
   root: {
     "& .MuiSvgIcon-root": {
-      fill: "tan",
+    
+      fill: "white",
       "&:hover": {
-        fill: "tomato",
-        fontSize: "1.8rem",
+        fill: "Tomato",
+        fontSize: "8rem",
       },
     },
   },
@@ -26,9 +31,9 @@ const Footer = () => {
 
   return (
     <BottomNavigation className={classes.bottomNavContainer}>
-      <BottomNavigationAction icon={<Facebook />} className={classes.root} />
-      <BottomNavigationAction icon={<Twitter />} className={classes.root} />
-      <BottomNavigationAction icon={<Instagram />} className={classes.root} />
+      <BottomNavigationAction href = "https://github.com/Mohamedsucule" icon={<GitHub  />}  className={classes.root} />
+      <BottomNavigationAction href = "https://www.linkedin.com/in/mohamed-sucule-672350195/" icon={<LinkedIn />} className={classes.root} />
+      <BottomNavigationAction href= "mailto:mohamedsucule@outlook.com"  icon={<Email />} className={classes.root} />
     </BottomNavigation>
   );
 };

@@ -5,12 +5,13 @@ import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
+import Particles from "./Particles"
 
 import Send from "@material-ui/icons/Send";
 
 const useStyles = makeStyles((theme) => ({
   contactContainer: {
-    background: "#233",
+    background: "./wallpaper.png",
     height: "100vh",
   },
   heading: {
@@ -26,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
   },
   input: {
-    color: "#fff",
+    color: "tomato",
   },
   button: {
     marginTop: "1rem",
@@ -44,7 +45,7 @@ const InputField = withStyles({
       color: "tomato",
     },
     "& label": {
-      color: "tan",
+      color: "white",
     },
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
@@ -61,9 +62,11 @@ const InputField = withStyles({
   },
 })(TextField);
 
-const Contact = () => {
+export default function Contact () {
   const classes = useStyles();
   return (
+   
+  
     <Box component="div" className={classes.contactContainer}>
       <Grid container justify="center">
         <Box component="form" className={classes.form}>
@@ -82,6 +85,7 @@ const Contact = () => {
             variant="outlined"
             inputProps={{ className: classes.input }}
             className={classes.field}
+            
           />
           <InputField
             fullWidth={true}
@@ -95,14 +99,29 @@ const Contact = () => {
             variant="outlined"
             fullWidth={true}
             endIcon={<Send />}
-            className={classes.button}
+            className={classes.button} 
+            href = "mailto:mohamedsucule@outlook.com "
           >
             Contact Me
           </Button>
         </Box>
       </Grid>
+      {/* <React.Fragment>
+     
+      <Particles />
+    </React.Fragment> */}
     </Box>
+    
+   
   );
 };
 
-export default Contact;
+
+
+
+
+
+
+
+
+

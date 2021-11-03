@@ -1,11 +1,12 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
+import Box from "@material-ui/core/Box"; 
+import Particles from "./Particles"
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    background: "#233",
+    background: "./wallpaper.jpg",
   },
   timeLine: {
     position: "relative",
@@ -102,17 +103,21 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "uppercase",
   },
   body1: {
-    color: "tomato",
+    color: "#fff",
   },
   subtitle1: {
-    color: "tan",
+    color: "white",
   },
 }));
 
 const Resume = () => {
   const classes = useStyles();
   return (
-    <Box component="header" className={classes.mainContainer}>
+    <Box component="header" className={classes.mainContainer}> 
+     <React.Fragment>
+     
+     <Particles />
+   </React.Fragment>
       <Typography variant="h4" align="center" className={classes.heading}>
         Working Experience
       </Typography>
@@ -121,7 +126,7 @@ const Resume = () => {
           variant="h2"
           className={`${classes.timeLineYear} ${classes.timeLineItem}`}
         >
-          2013
+          2019
         </Typography>
         <Box component="div" className={classes.timeLineItem}>
           <Typography
@@ -129,27 +134,29 @@ const Resume = () => {
             align="center"
             className={classes.subHeading}
           >
-            web design
+            Mechanical Engineering (Beng)
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
-            company name where worked
+           Aston University
           </Typography>
           <Typography
             variant="subtitle1"
             align="center"
             className={classes.subtitle1}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-            ipsa, laudantium totam perferendis possimus voluptatibus tenetur.
-            Quasi voluptatibus, nam vitae eaque ad, officia laboriosam
-            repudiandae, rerum necessitatibus nisi mollitia.
+          -Reading and assessing detailed engineering drawings of parts. <br/>
+-Detecting subtle problems in designs and offering solutions to issues <br/>
+-Liaising with Lab technicians in the production of parts. <br/>
+-Forming calculations and proposing solutions to a variety of problems. <br/>
+-Presenting and pitching findings to investors. <br/>
+-Working with a narrow budget under tight deadlines.<br/>
           </Typography>
         </Box>
         <Typography
           variant="h2"
           className={`${classes.timeLineYear} ${classes.timeLineItem}`}
         >
-          2014
+          2021
         </Typography>
         <Box component="div" className={classes.timeLineItem}>
           <Typography
@@ -157,27 +164,24 @@ const Resume = () => {
             align="center"
             className={classes.subHeading}
           >
-            html & css
+            Front end development bootcamp 
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
-            company name where worked
+            Codaisseur
           </Typography>
           <Typography
             variant="subtitle1"
             align="center"
             className={classes.subtitle1}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-            ipsa, laudantium totam perferendis possimus voluptatibus tenetur.
-            Quasi voluptatibus, nam vitae eaque ad, officia laboriosam
-            repudiandae, rerum necessitatibus nisi mollitia.
+           Intensive front end development bootcamp where I studied javascript, HTML, CSS, React ES6 node and more. During this bootcamp my passion for web development blossomed, I enjoyed the blend of creativity and problem solving required to create bespoke web designs. In depth study of component based design and managing state.
           </Typography>
         </Box>
         <Typography
           variant="h2"
           className={`${classes.timeLineYear} ${classes.timeLineItem}`}
         >
-          2015
+          2021
         </Typography>
         <Box component="div" className={classes.timeLineItem}>
           <Typography
@@ -185,52 +189,24 @@ const Resume = () => {
             align="center"
             className={classes.subHeading}
           >
-            Fullstack Javascript
+            Complete web development bootcamp.
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
-            company name where worked
+            Udemy 
           </Typography>
           <Typography
             variant="subtitle1"
             align="center"
             className={classes.subtitle1}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-            ipsa, laudantium totam perferendis possimus voluptatibus tenetur.
-            Quasi voluptatibus, nam vitae eaque ad, officia laboriosam
-            repudiandae, rerum necessitatibus nisi mollitia.
+           course where I solidified understanding of front end concepts such as DOM manipulation, react hooks and much more. An important aspect of web development is self study and research to so I embarked on a journey to deepen my understading of front end development.
           </Typography>
+         
         </Box>
-        <Typography
-          variant="h2"
-          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-        >
-          2017
-        </Typography>
-        <Box component="div" className={classes.timeLineItem}>
-          <Typography
-            variant="h5"
-            align="center"
-            className={classes.subHeading}
-          >
-            Django & React
-          </Typography>
-          <Typography variant="body1" align="center" className={classes.body1}>
-            company name where worked
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            align="center"
-            className={classes.subtitle1}
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-            ipsa, laudantium totam perferendis possimus voluptatibus tenetur.
-            Quasi voluptatibus, nam vitae eaque ad, officia laboriosam
-            repudiandae, rerum necessitatibus nisi mollitia.
-          </Typography>
+       
         </Box>
       </Box>
-    </Box>
+    
   );
 };
 
